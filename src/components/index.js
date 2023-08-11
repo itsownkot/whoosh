@@ -1,0 +1,9 @@
+export { default as Navbar } from "./Navbar/Navbar";
+export { default as Hero } from "./Hero/Hero";
+export { default as Info } from "./Info/Info";
+export { default as About } from "./About/About";
+export { default as Partners } from "./Partners/Partners";
+export { default as Payment } from "./Payment/Payment";
+export { default as InfoText } from "./InfoText/InfoText";
+export { default as Footer } from "./Footer/Footer";
+export { default as Divider } from "./Divider/Divider";

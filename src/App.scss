@@ -1,0 +1,99 @@
+@import "colors";
+
+@font-face {
+  font-family: Intro;
+  font-weight: bold;
+  src: url("./assets/fonts/Intro-Bold.ttf");
+}
+@font-face {
+  font-family: Intro;
+  font-weight: medium;
+  src: url("./assets/fonts/Intro-Regular.ttf");
+}
+@font-face {
+  font-family: Intro;
+  font-weight: normal;
+  src: url("./assets/fonts/Intro-Book.ttf");
+}
+@font-face {
+  font-family: Intro;
+  font-weight: normal;
+  font-style: italic;
+  src: url("./assets/fonts/Intro-Book-Italic.ttf");
+}
+@font-face {
+  font-family: Intro;
+  font-weight: light;
+  src: url("./assets/fonts/Intro-Light.ttf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  color: $darkBlue;
+  font-family: Intro, sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 40px;
+  @media screen and (max-width: 360px) {
+    font-size: 24px;
+  }
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  @media screen and (max-width: 360px) {
+    font-size: 20px;
+  }
+}
+
+h3 {
+  font-weight: medium;
+  font-size: 22px;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 22px;
+}
+
+h5 {
+  font-weight: medium;
+  font-size: 18px;
+  @media screen and (max-width: 360px) {
+    font-size: 20px;
+  }
+}
+
+p {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+p.small {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+p.menu {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+span.number {
+  font-weight: medium;
+  font-size: 32px;
+}
+
+input::placeholder {
+  font-family: Intro, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}

@@ -1,0 +1,115 @@
+@import "../../colors";
+
+.about {
+  background-color: $grey;
+  padding: 72px 183px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: {
+    top-left-radius: 130px;
+    bottom-left-radius: 130px;
+  }
+  @media screen and (max-width: 360px) {
+    margin-top: 48px;
+    border-radius: 0;
+    padding: 48px 16px;
+  }
+
+  &__cityImage {
+    width: 220px;
+    height: 504px;
+    position: absolute;
+    right: 0;
+    bottom: 30%;
+  }
+
+  h4 {
+    margin-top: 29px;
+    text-align: center;
+  }
+
+  &__features {
+    margin-top: 39px;
+    display: flex;
+    gap: 50px;
+
+    @media screen and (max-width: 360px) {
+      flex-direction: column;
+      gap: 36px;
+      margin-top: 31px;
+    }
+
+    &__item {
+      width: 300px;
+      height: 236px;
+
+      @media screen and (max-width: 360px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        border-radius: 100%;
+        box-shadow: 0 8px 16px rgba($blue, 0.16);
+      }
+
+      h3 {
+        margin-top: 31px;
+        span {
+          color: $blue;
+          text-decoration: underline;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: none;
+            opacity: 0.5;
+          }
+        }
+        @media screen and (max-width: 360px) {
+          font-size: 20px;
+        }
+      }
+
+      p {
+        margin-top: 20px;
+
+        @media screen and (max-width: 360px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  button {
+    width: 296px;
+    border-radius: 32px;
+    margin-top: 36px;
+    border: none;
+    background-color: $yellow;
+    padding: 13px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      margin-top: 0;
+      font-weight: 600;
+    }
+
+    &:hover {
+      p {
+        color: #fff;
+      }
+    }
+  }
+}

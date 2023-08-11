@@ -1,0 +1,456 @@
+@import "../../colors";
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  padding-bottom: 32px;
+  // background-color: #f8faff;
+  background-color: $grey;
+  position: relative;
+
+  @media screen and (max-width: 360px) {
+    flex-direction: column-reverse;
+    padding: 0 16px;
+    padding-bottom: 55px;
+  }
+
+  &__background {
+    position: absolute;
+    // top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90%;
+    width: 657px;
+
+    @media screen and (max-width: 360px) {
+      width: 90%;
+      height: 50%;
+    }
+  }
+}
+
+.hero__right {
+  width: 360px;
+  margin-top: 36px;
+  z-index: 1;
+
+  @media screen and (max-width: 360px) {
+    width: 100%;
+  }
+
+  &__top {
+    background-color: #fff;
+    padding: 0 32px;
+    padding-top: 39px;
+    padding-bottom: 24px;
+    box-shadow: 0 8px 16px rgba($blue, 0.08);
+    border: {
+      style: solid;
+      width: 2px;
+      color: $lightBlue;
+      radius: 8px;
+    }
+
+    @media screen and (max-width: 360px) {
+      padding: 0 16px;
+      padding-top: 39px;
+      padding-bottom: 24px;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      -webkit-tap-highlight-color: transparent;
+
+      img {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      div {
+        position: relative;
+        p {
+          box-shadow: 0 16px 16px rgba($blue, 0.16);
+          position: absolute;
+          padding: 8px 16px;
+          border: 1px solid $lightBlue;
+          z-index: 999;
+          background-color: #fff;
+          width: 252px;
+          top: 20px;
+          right: 17px;
+          @media screen and (max-width: 360px) {
+            right: -45px;
+          }
+        }
+      }
+    }
+
+    &__switch {
+      display: flex;
+      margin-top: 20px;
+
+      &__item {
+        width: 100px;
+        height: 84px;
+        cursor: pointer;
+        background-color: $grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px $lightBlue;
+        padding: 1px;
+        -webkit-tap-highlight-color: transparent;
+
+        @media screen and (max-width: 360px) {
+          width: 33%;
+          height: 40px;
+
+          img,
+          div {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        &:hover {
+          opacity: 0.5;
+          @media screen and (max-width: 360px) {
+            opacity: 1;
+          }
+        }
+
+        &:nth-child(1) {
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+        &:nth-child(2) {
+          border-right: none;
+          border-left: none;
+        }
+        &:nth-child(3) {
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+
+        &.active {
+          padding: 0;
+          background-color: #fff;
+          border: {
+            width: 2px;
+            style: solid;
+            color: $blue;
+          }
+          p {
+            color: black;
+            font-weight: semi-bold;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &__location {
+      margin-top: 34px;
+      display: flex;
+      gap: 16px;
+
+      &__icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 18px;
+
+        &__dots {
+          width: 4px;
+          margin-top: 8px;
+          margin-bottom: 4px;
+        }
+      }
+
+      &__inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (max-width: 360px) {
+          flex: 1;
+        }
+      }
+
+      &__item {
+        position: relative;
+
+        p {
+          font-size: 12px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          color: $lightBlue;
+        }
+
+        input {
+          margin-top: 7px;
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid $lightBlue;
+          outline: none;
+          padding-bottom: 1px;
+          &:focus {
+            border-bottom: 2px solid $blue;
+            padding-bottom: 0;
+          }
+        }
+
+        &:hover {
+          opacity: 0.5;
+
+          @media screen and (max-width: 360px) {
+            opacity: 1;
+          }
+        }
+
+        &__dropdown {
+          position: absolute;
+          z-index: 999;
+          width: 100%;
+          padding: 16px;
+          border: 1px solid $lightBlue;
+          border-radius: 8px;
+          background-color: #fff;
+
+          &__rightwrap {
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 25px;
+            background-color: #fff;
+            opacity: 0.5;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+          }
+
+          p {
+            color: black;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+
+      &__order {
+        background-color: $blue;
+        height: 48px;
+        border: {
+          radius: 32px;
+          width: 0;
+        }
+        cursor: pointer;
+
+        p {
+          color: #fff;
+          // font-weight: 500;
+        }
+
+        &:hover {
+          background-color: #1252db;
+        }
+      }
+
+      &__clear {
+        border: none;
+        background-color: transparent;
+        margin-top: 16px;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 72px;
+    border-radius: 8px;
+    height: 144px;
+    width: 100%;
+    background-color: $yellow;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(black, 0.08);
+
+    @media screen and (max-width: 360px) {
+      margin-top: 32px;
+      padding: 0 16px;
+    }
+
+    &__input {
+      height: 40px;
+      width: 280px;
+      margin-top: 9px;
+      display: flex;
+      background-color: #fff;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 12px;
+
+      @media screen and (max-width: 360px) {
+        width: 100%;
+      }
+
+      input {
+        padding-left: 4px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+      }
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.hero__left {
+  width: 375px;
+  margin-top: 66px;
+  // padding-left: 71px;
+  margin-left: 71px;
+  z-index: 1;
+
+  @media screen and (max-width: 360px) {
+    width: 100%;
+    margin: 0;
+    margin-top: 46px;
+  }
+
+  &__top {
+    p {
+      margin-top: 34px;
+
+      @media screen and (max-width: 360px) {
+        margin-top: 14px;
+      }
+    }
+
+    a {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 105px;
+      text-decoration: none;
+      color: $blue;
+      font-weight: bold;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      @media screen and (max-width: 360px) {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 80px;
+
+    @media screen and (max-width: 360px) {
+      margin-top: 37px;
+    }
+
+    &__pagging {
+      margin-top: 17px;
+      display: flex;
+      gap: 16px;
+
+      div {
+        width: 24px;
+        height: 8px;
+        background-color: $lightBlue;
+        border-radius: 4px;
+
+        &.active {
+          background-color: $blue;
+        }
+      }
+    }
+  }
+
+  &__video {
+    margin-top: 22px;
+    width: 374px;
+    height: 232px;
+    border-radius: 8px;
+    position: relative;
+
+    @media screen and (max-width: 360px) {
+      height: 200px;
+      width: 100%;
+      margin-top: 17px;
+    }
+
+    &__paused {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      border-radius: 8px;
+
+      img {
+        transition: transform 200ms;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.15);
+        }
+        .hero__left__video__paused__button {
+          transform: scale(1.375);
+        }
+      }
+
+      &__button {
+        width: 96px;
+        height: 96px;
+        background-color: rgba(black, 0.32);
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: transform 200ms;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+}

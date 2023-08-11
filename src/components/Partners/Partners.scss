@@ -1,0 +1,80 @@
+@import "../../colors";
+
+.partners {
+  margin-top: 82px;
+  padding: 0 103px;
+
+  @media screen and (max-width: 360px) {
+    margin-top: 38px;
+    padding: 0;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 360px) {
+      justify-content: center;
+    }
+
+    div {
+      width: 184px;
+      @media screen and (max-width: 360px) {
+        width: 100%;
+      }
+    }
+  }
+
+  button {
+    background-color: transparent;
+    padding: 8px 16px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+
+    @media screen and (max-width: 360px) {
+      margin-top: 48px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      position: relative;
+      top: -1px;
+    }
+
+    border: {
+      radius: 24px;
+      style: solid;
+      width: 1px;
+      color: $lightBlue;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__list {
+    margin-top: 70px;
+    margin-bottom: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+
+    @media screen and (max-width: 360px) {
+      margin-top: 26px;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      width: 100px;
+      height: 40px;
+      z-index: 999;
+    }
+  }
+}

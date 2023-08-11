@@ -1,0 +1,120 @@
+@import "../../colors";
+
+footer {
+  background-color: $grey;
+  padding: 0 103px;
+  padding-top: 85px;
+  padding-bottom: 56px;
+  border-top: 1px solid $lightBlue;
+
+  @media screen and (max-width: 360px) {
+    margin-top: 52px;
+    padding: 0 16px;
+    padding-top: 45px;
+  }
+
+  .footer__top {
+    display: flex;
+    justify-content: space-between;
+
+    &__section {
+      min-width: 200px;
+      max-width: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+
+      &__title {
+        border-bottom: 2px solid transparent;
+        padding-bottom: 9px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      &__body {
+        margin-top: 21px;
+
+        &__socials {
+          display: flex;
+          justify-content: space-between;
+
+          img {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+    margin-top: 13px;
+  }
+}
+
+// MOBILE FOOTER
+.mobile-footer {
+  border-top: 1px solid $lightBlue;
+
+  &__section__title {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__about {
+    &__body {
+      display: flex;
+      margin-top: 32px;
+      gap: 16px;
+    }
+  }
+
+  &__features {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+
+    &__section {
+      min-width: 156px;
+
+      &__title {
+        border-bottom: 2px solid $lightBlue;
+        padding-bottom: 9px;
+      }
+
+      &__body {
+        margin-top: 21px;
+      }
+    }
+  }
+
+  &__contacts {
+    margin-top: 42px;
+
+    &__title {
+      border-bottom: 2px solid $lightBlue;
+      padding-bottom: 9px;
+    }
+
+    &__body {
+      margin-top: 22px;
+
+      &__socials {
+        margin-top: 26px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 27px;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 53px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

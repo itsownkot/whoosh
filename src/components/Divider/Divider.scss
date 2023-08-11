@@ -1,0 +1,30 @@
+@import "../../colors";
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__box {
+    margin-left: 34px;
+    margin-right: 34px;
+  }
+
+  &__text {
+    // margin-left: 8px;
+    // margin-right: 8px;
+    // width: 86px;
+    // display: flex;
+    // justify-content: center;
+    padding: 0 10px;
+    p {
+      color: $lightBlue;
+    }
+  }
+
+  &__sides {
+    flex: 1;
+    height: 2px;
+    background-color: $lightBlue;
+  }
+}

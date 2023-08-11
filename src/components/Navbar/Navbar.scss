@@ -1,0 +1,261 @@
+@import "../../colors";
+
+.nav {
+  display: flex;
+  gap: 66px;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid $lightBlue;
+  padding: 0 32px;
+  background-color: $grey;
+
+  @media screen and (max-width: 360px) {
+    justify-content: space-between;
+    width: 100%;
+    gap: 0;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+
+    @media screen and (max-width: 360px) {
+      background: #fff;
+      flex-direction: column;
+      gap: 44px;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      z-index: 999;
+      padding: 16px 26px;
+      padding-bottom: 32px;
+      justify-content: start;
+      box-shadow: 0 16px 16px rgba($blue, 0.16);
+    }
+  }
+
+  &__logo {
+    width: 192px;
+    height: 64px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: 360px) {
+      width: 120px;
+      height: 40px;
+    }
+  }
+}
+
+.nav__center,
+.nav__right {
+  display: flex;
+  align-items: center;
+  flex: 1;
+
+  @media screen and (max-width: 360px) {
+    flex-direction: column;
+    flex: none;
+  }
+}
+
+.nav__center {
+  // gap: 169px;
+  justify-content: space-between;
+
+  @media screen and (max-width: 360px) {
+    gap: 46px;
+  }
+
+  &__cities {
+    cursor: pointer;
+    position: relative;
+    height: 24px;
+    // border: 1px solid;
+    @media screen and (max-width: 360px) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__city {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 16px;
+      gap: 8px;
+
+      @media screen and (max-width: 360px) {
+        padding: 0;
+        gap: 16px;
+
+        div:nth-child(2) {
+          border-bottom: 1px dashed $lightBlue;
+        }
+      }
+
+      &__icon {
+        width: 12px;
+        height: 16px;
+      }
+    }
+
+    &__list {
+      position: absolute !important;
+      top: 25px;
+      // height: 0;
+      overflow-y: auto;
+      // position: relative;
+      background-color: #fff;
+      border-radius: 8px;
+      border: 1px solid $lightBlue;
+      overflow-y: auto;
+      max-height: 216px;
+      z-index: 999;
+
+      &.hidden {
+        visibility: hidden;
+      }
+
+      &__item {
+        padding: 8px 15px;
+        word-wrap: wrap;
+        max-width: 150px;
+
+        &:hover {
+          background-color: $grey;
+          color: $blue;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $lightBlue;
+        border-radius: 8px;
+        // width: 4px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+    }
+  }
+
+  &__track {
+    height: 40px;
+    // width: 184px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+
+    &.active {
+      background-color: white;
+      border: 1px solid $blue;
+      &:hover {
+        background-color: #fff;
+      }
+    }
+    &:hover {
+      background-color: $grey;
+    }
+
+    border: {
+      radius: 8px;
+      width: 1px;
+      style: solid;
+      color: $lightBlue;
+    }
+    @media screen and (max-width: 360px) {
+      border-radius: 4px;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      background-color: inherit;
+
+      &:focus {
+        &::placeholder {
+          color: black;
+        }
+      }
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    justify-content: start;
+  }
+}
+
+.nav__right {
+  justify-content: flex-end;
+  gap: 36px;
+
+  p {
+    cursor: pointer;
+  }
+
+  p:hover {
+    opacity: 0.5;
+    @media screen and (max-width: 360px) {
+      opacity: 1;
+    }
+  }
+
+  &__login {
+    border-radius: 100%;
+    background-color: $blue;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    gap: 24px;
+    align-items: start;
+    position: relative;
+    flex: 1;
+    justify-content: start;
+  }
+}
+
+.sidebar__orderBtn {
+  position: absolute;
+  background-color: $blue;
+  width: 100%;
+  border-radius: 32px;
+  border: none;
+  bottom: 0;
+
+  &:hover {
+    background-color: #1252db;
+  }
+
+  p {
+    color: white;
+    font-weight: bold;
+    padding: 13px 0;
+    font-size: 18px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
