@@ -4,8 +4,6 @@ import "./Footer.scss";
 import pathIcon from "../../assets/footer/pathIcon.svg";
 import shield from "../../assets/footer/shield.svg";
 import pin from "../../assets/footer/Pin.svg";
-import logo from "../../assets/footer/logo.svg";
-import logoMobile from "../../assets/footer/logo-mobile.svg";
 import isMobileHook from "../../isMobileHook";
 
 const FooterMobile = () => (
@@ -112,10 +110,6 @@ const FooterMobile = () => (
           © 2022. All rights reserved.
         </p>
       </div>
-      <Divider text="Made by" style={{ marginTop: 22, width: "100%" }} />
-      <div style={{ marginTop: 13 }}>
-        <img src={logoMobile} alt="maker logo" />
-      </div>
     </section>
   </footer>
 );
@@ -204,9 +198,6 @@ const FooterDesktop = () => (
     <section className="footer__bottom">
       <div>
         <p className="small">© 2022. All rights reserved.</p>
-      </div>
-      <div>
-        <img src={logo} alt="maker logo" />
       </div>
       <div
         style={{ display: "flex", gap: 13, alignItems: "center", width: 176 }}
